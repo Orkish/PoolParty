@@ -2,6 +2,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
   def change
     create_table(:users) do |t|
       ## User details
+      t.string :username, :null => false, :unique => true
       t.string :firstname, :null => false
       t.string :lastname, :null => false
       t.string :phone, :null => false
