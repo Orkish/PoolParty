@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131108154431) do
+ActiveRecord::Schema.define(version: 20131108200705) do
+
+  create_table "trips", force: true do |t|
+    t.string   "date",        null: false
+    t.string   "time",        null: false
+    t.string   "location",    null: false
+    t.string   "destination", null: false
+    t.integer  "spaces",      null: false
+    t.text     "info"
+    t.integer  "users_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "username",                            null: false
