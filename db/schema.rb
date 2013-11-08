@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20131108200705) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "trips", force: true do |t|
     t.string   "date",        null: false
     t.string   "time",        null: false
