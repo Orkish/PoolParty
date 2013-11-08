@@ -12,11 +12,14 @@ gem 'pg'
 # Testing gems
 group :test do 
 
-	gem 'rspec'
 	gem 'cucumber-rails'
 	gem 'database_cleaner'
 	gem 'capybara'
 
+end
+
+group :test, :development do 
+  gem "rspec-rails", "~> 2.4"
 end
 
 # Use SCSS for stylesheets
