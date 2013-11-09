@@ -5,7 +5,7 @@ Feature: Sign In
 
 	Scenario: Returning Visitor
 		Given I visit the splash page
-		And I fill in the sign in form
-		When I click on 'sign-in'
-		Then I should be redirected to the profile page
-		Then I should see 'Welcome, user!'
+		Given I fill in 'test@test.com' for 'user_email'
+		Given I fill in 'password' for 'user_password'
+		When I press 'Sign in'
+		Then I should see 'Welcome, user!' as the 'greeting'
