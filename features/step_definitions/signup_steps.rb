@@ -1,4 +1,4 @@
-Given(/^I visit the splash page$/) do 
+Given(/^I visit the sign up page$/) do 
   visit '/users/sign_up'
 end
 
@@ -22,13 +22,22 @@ Then(/^I should see '(Welcome! You have signed up successfully.)' as the greetin
   assert find('#notice').text == greeting
 end
 
+When(/^I click 'Sign Out'$/) do
+  click_link('Sign Out')
+end
 
+Then(/^I should see '(Signed out successfully.)' as the message$/) do |message|
+  assert find('#notice').text == message
+end
 
+Given(/^I visit the sign in page$/) do
+  visit '/users/sign_in'
+end
 
+When(/^I press 'Sign in'$/) do
+  click_button('Sign in')
+end
 
-
-
-
-
-
-
+Then(/^I should see '(Welcome!)' as the message$/) do |message|
+  assert find('#notice').text == message
+end
