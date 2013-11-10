@@ -1,36 +1,72 @@
 /******* splash page ********/
-
-#wrapper {
-  height: 100%;
-  width: 100%;
-  position: relative;
+* {
+  margin: 0;
+  padding: 0;
 }
-/*
-#example_video_1 {
-  position: absolute;
-}*/
 
-#login {
+h2 {
+  font-size: 4em;
+}
+
+#example-video-1 {
+  position: absolute;
+  top: 0;
+}
+
+.button {
+  border: 1px solid;
+}
+
+#button-signup {
   color: white;
   position: absolute;
   margin-top: 250px;
   margin-left: 530px;
   text-align: center;
-  z-index: 100;
 }
 
-#about-button {
-  color: white;
+#main-container {
+  height: 100%;
+  width: 100%;
   position: absolute;
-  margin-top: 400px;
-  margin-left: 100px;
-  text-align: center;
-  z-index: 101;
 }
 
-.about-us {
+#splash-about {
   color: white;
   background-color: rgba(0, 0, 0, .7);
   width: 150px;
   height: 200px;
+}
+
+#splash-first {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+
+#splash-home {
+  color: white;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  top: 40%;
+  z-index: 100;
+}
+
+#splash-second {
+  background-color: lightgreen;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+}
+
+#splash-third {
+  background-color: lightblue;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 200%;
 }
