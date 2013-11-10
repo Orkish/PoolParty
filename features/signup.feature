@@ -4,7 +4,7 @@ Feature: Sign Up
   I want to be able to sign up.
 
 	Scenario: New Visitor
-		Given I visit the splash page
+		Given I visit the sign up page
 		And I fill in 'test' for 'user_firstname'
 		And I fill in 'test' for 'user_lastname'
 		And I fill in 'test' for 'user_username'
@@ -14,4 +14,10 @@ Feature: Sign Up
 		And I fill in 'test@test.com' for 'user_email'
 		When I press 'Sign up'
 		Then I should see 'Welcome! You have signed up successfully.' as the greeting
-    
+    When I click 'Sign Out'
+    Then I should see 'Signed out successfully.' as the message
+    Given I visit the sign in page
+    And I fill in 'test@test.com' for 'user_email'
+    And I fill in 'password' for 'user_password'
+    When I press 'Sign in'
+    Then I should see 'Welcome!' as the message
