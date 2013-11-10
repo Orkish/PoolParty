@@ -4,5 +4,6 @@ Poolparty::Application.routes.draw do
 
   # before_filter :authenticate_user!
   get '/index', to: "home#index"
+  get '/profile', to: "profiles#profile"
 
 end
