@@ -1,8 +1,36 @@
 /******* splash page ********/
-/*
-.splash {
-  
-  height: auto;
+
+#wrapper {
+  height: 100%;
   width: 100%;
-  z-index: 0;
+  position: relative;
+}
+/*
+#example_video_1 {
+  position: absolute;
 }*/
+
+#login {
+  color: white;
+  position: absolute;
+  margin-top: 250px;
+  margin-left: 530px;
+  text-align: center;
+  z-index: 100;
+}
+
+#about-button {
+  color: white;
+  position: absolute;
+  margin-top: 400px;
+  margin-left: 100px;
+  text-align: center;
+  z-index: 101;
+}
+
+.about-us {
+  color: white;
+  background-color: rgba(0, 0, 0, .7);
+  width: 150px;
+  height: 200px;
+}
