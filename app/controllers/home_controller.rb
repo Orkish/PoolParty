@@ -1,8 +1,9 @@
 class HomeController < ApplicationController
 	def splash
-		# self.resource = resource_class.new(sign_in_params)
-  #   clean_up_passwords(resource)
-  #   respond_with(resource, serialize_options(resource))
+		if user_signed_in?
+			@user = current_user
+			render "profiles/index"
+		end
 	end
 
 	def index

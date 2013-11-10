@@ -24,7 +24,7 @@ $(function() {
 
 
 
-////// Javier's code /////////
+//// Javier's code /////////
 function updateSize() { 
   var windowW = $(window).width(); 
   var windowH = $(window).height(); 
