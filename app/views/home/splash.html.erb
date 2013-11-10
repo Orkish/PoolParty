@@ -5,6 +5,7 @@
       <h3>This is where user sign in</h3>
       <span class="button" id="button-aboutus">About Us</span>
     </div>
+    <h2>Sign in</h2>
     <div>
       <video id="example-video-1" class="video-js vjs-default-skin splash"
         preload="auto" loop="true" autoplay preload="auto" height="550" width="100%"
@@ -25,7 +26,38 @@
     </div>
   </div>
   <div id="splash-third">
-    This contain the form
+    <div id="splash-signup">
+    	<h2>Sign up</h2>
+
+			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  			<%= devise_error_messages! %>
+  
+			  <div><%= f.label :firstname %><br />
+			  <%= f.text_field :firstname, :autofocus => true %></div>  
+			  
+			  <div><%= f.label :lastname %><br />
+			  <%= f.text_field :lastname %></div> 
+
+			  <div><%= f.label :username %><br />
+			  <%= f.text_field :username %></div>
+
+			  <div><%= f.label :email %><br />
+			  <%= f.email_field :email %></div>
+
+			  <div><%= f.label :phone %><br />
+			  <%= f.text_field :phone %></div> 
+
+			  <div><%= f.label :password %><br />
+			  <%= f.password_field :password %></div>
+
+			  <div><%= f.label :password_confirmation %><br />
+			  <%= f.password_field :password_confirmation %></div>
+
+			  <div><%= f.submit "Sign up" %></div>
+			<% end %>
+
+			<%= render "devise/shared/links" %>
+    </div>
   </div>
 
 </div>
