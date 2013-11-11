@@ -70,3 +70,76 @@ h2 {
   position: absolute;
   top: 200%;
 }
+
+/****** profile page ******/
+
+#div-banner {
+  height: 400px;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+#nav {
+  position: absolute;
+  bottom: 0;
+
+}
+
+#img-banner {
+  height: 440px;
+  width: 100%;
+}
+
+#profile-container {
+  margin-right: 250px;
+  margin-left: 250px;
+  margin-top: 290px;
+}
+
+#profile-img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+#profile-content {
+  color: white;
+  background-color: rgba(0, 0, 0, .7);
+  margin-top: 15px;
+  width: 500px;
+}
+
+#nav {
+  background-color: rgba(0, 0, 0, .6);
+  height: 40px;
+  width: 100%;
+}
+
+#test {
+  border: 1px solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
