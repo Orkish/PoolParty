@@ -2,7 +2,8 @@
   <div id="splash-first">
     <div id="splash-home">
       <h2>IT'S A POOL PARTY!</h2>
-      <h3>Sign in</h2>
+      <h3>Sign in</h3>
+
       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
         <div>
           <%= f.label :email %>
@@ -12,13 +13,19 @@
         </div>
 
         <% if devise_mapping.rememberable? -%>
-          <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-        <% end -%>
+          <div>
+            <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+          </div>
+        <% end %>
 
-        <div><%= f.submit "Sign in" %></div>
+        <div>
+          <%= f.submit "Sign in" %>
+        </div>
       <% end %>
+
       <span class="button" id="button-aboutus">About Us</span>
     </div>
+    <h2>Sign in</h2>
     <div>
       <video id="example-video-1" class="video-js vjs-default-skin splash"
         preload="auto" loop="true" autoplay preload="auto" height="550" width="100%"
@@ -28,7 +35,7 @@
         <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
         <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
       </video>
-    </div>
+    <div>
   </div>
   <div id="splash-second">
     <h3 class="button" id="button-signup">Sign up</h3>
@@ -46,7 +53,7 @@
   			<%= devise_error_messages! %>
   
 			  <div><%= f.label :firstname %><br />
-			  <%= f.text_field :firstname, :autofocus => true %></div>  
+			  <%= f.text_field :firstname %></div>  
 			  
 			  <div><%= f.label :lastname %><br />
 			  <%= f.text_field :lastname %></div> 

@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
 
-  def profile
+  def index
   end
 
 end
