@@ -10,19 +10,21 @@
 				<td>Spaces</td>
 			</thead>
 		<% @trips.each do |trip| %>
-			<tr class="trips" id="trip<%= trip.id %>">
-				<td><%= trip.date %></td>
-				<td><%= trip.time %></td>
-				<td><%= trip.location %></td>
-				<td><%= trip.destination %></td>
-				<td><%= trip.spaces %></td>
-			</tr>
+			<tbody>
+				<tr class="trips" id="trip/<%= trip.id %>">
+					<td><%= trip.date %></td>
+					<td><%= trip.time %></td>
+					<td><%= trip.location %></td>
+					<td><%= trip.destination %></td>
+					<td><%= trip.spaces %></td>
+				</tr>
+			</tbody>
 		<% end %>
 		</table>
 	</div>
 </span>
 
-<div>
+<div id="show-trip">
 	Scheduled rides appear here.
 </div>
 

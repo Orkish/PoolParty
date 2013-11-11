@@ -6,5 +6,6 @@ Poolparty::Application.routes.draw do
   get '/index', to: "home#index"
   get '/profile', to: "profiles#index"
   get '/profile/trips', to: "profiles#trips"
+  get '/trip/:id', to: "profiles#show"
 
 end

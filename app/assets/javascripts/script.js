@@ -21,30 +21,33 @@ $(function() {
   $button_signup.on("click", shiftTwo);
 });
 
-//// Javier's code /////////
-function updateSize() { 
-  var windowW = $(window).width(); 
-  var windowH = $(window).height(); 
-  var windowAspect = windowW/windowH;
+///////////////// AJAX CALLS //////////////////
+var $trip_row,
+    $trip_show;
 
-  console.log(windowW);
-  console.log(windowH);
-}
+function appendData(trip){
+  $trip_show.text("Date: " + trip.date);
+};
 
-$(function() {
-  updateSize();
-});
+$(function(){
+  $trip_row = $('.trips');
+  $trip_show = $('#show-trip');
 
+  $trip_row.on("click", function(){
+    $.ajax({
+      url: '/' + $(this).attr("id"),
+      method: 'GET',
+      datatype: 'json'
+    }).success(function(data){
+      $trip_show.empty().append($("<div>Date: " + data.date + "<br>"
+        + "Time: " + data.time + "<br>"
+        + "Location: " + data.location + "<br>"
+        + "Destination: " + data.destination + "<br>"
+        + "Spaces: " + data.spaces + "<br></div>"
 
-
-
-
-
-
-
-
-
-
-
-
-
+        ));
+      console.log(data);
+    });
+    console.log($(this).attr("id"));
+  });
+})
