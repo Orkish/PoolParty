@@ -1,0 +1,36 @@
+<div>
+	<h3>List of available trips!</h3>
+	<div>
+		<table>
+			<thead>
+				<td>Date</td>
+				<td>Time</td>
+				<td>Location</td>
+				<td>Destination</td>
+				<td>Spaces</td>
+			</thead>
+		<% @trips.each do |trip| %>
+			<tr>
+				<td><%= trip.date %></td>
+				<td><%= trip.time %></td>
+				<td><%= trip.location %></td>
+				<td><%= trip.destination %></td>
+				<td><%= trip.spaces %></td>
+			</tr>
+		<% end %>
+		</table>
+	</div>
+</span>
+
+<div>
+	Scheduled rides appear here
+</div>
+
+<!--   create_table "trips", force: true do |t|
+    t.string   "date",        null: false
+    t.string   "time",        null: false
+    t.string   "location",    null: false
+    t.string   "destination", null: false
+    t.integer  "spaces",      null: false
+    t.text     "info"
+    t.integer  "user_id" -->

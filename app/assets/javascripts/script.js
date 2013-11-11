@@ -24,6 +24,21 @@ $(function() {
 
 
 
+<<<<<<< HEAD
+////// Javier's code /////////
+// function updateSize() { 
+//   var windowW = $(window).width(); 
+//   var windowH = $(window).height(); 
+//   var windowAspect = windowW/windowH;
+
+//   console.log(windowW);
+//   console.log(windowH);
+// }
+
+// $(function() {
+//   updateSize();
+// });
+=======
 //// Javier's code /////////
 function updateSize() { 
   var windowW = $(window).width(); 
@@ -37,6 +52,7 @@ function updateSize() { 
 $(function() {
   updateSize();
 });
+>>>>>>> 7538c2500908050799209b30d226cbf119f048f2
 
 
 
