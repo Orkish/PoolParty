@@ -10,7 +10,7 @@
 				<td>Spaces</td>
 			</thead>
 		<% @trips.each do |trip| %>
-			<tr>
+			<tr class="trips" id="trip<%= trip.id %>">
 				<td><%= trip.date %></td>
 				<td><%= trip.time %></td>
 				<td><%= trip.location %></td>
@@ -23,7 +23,7 @@
 </span>
 
 <div>
-	Scheduled rides appear here
+	Scheduled rides appear here.
 </div>
 
 <!--   create_table "trips", force: true do |t|
