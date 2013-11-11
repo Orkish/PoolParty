@@ -51,3 +51,11 @@ $(function(){
     console.log($(this).attr("id"));
   });
 })
+
+///////// date picker calendar ////////
+
+$(function() {
+  $( "#datepicker" ).datepicker();
+  $.datepicker.setDefaults( $.datepicker.regional[ "" ] );
+});
+

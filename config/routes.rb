@@ -7,5 +7,7 @@ Poolparty::Application.routes.draw do
   get '/profile', to: "profiles#index"
   get '/profile/trips', to: "profiles#trips"
   get '/trip/:id', to: "profiles#show"
+  get '/new', to: "profiles#new"
+  post '/create', to: "profiles#create", as: "trips"
 
 end

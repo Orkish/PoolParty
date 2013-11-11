@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-h2 {
+h1 {
   font-size: 4em;
 }
 
@@ -74,15 +74,15 @@ h2 {
 /****** profile page ******/
 
 #div-banner {
-  height: 400px;
-  position: absolute;
+  height: 440px;
+  /*position: absolute;*/
   width: 100%;
   z-index: -1;
 }
 
 #nav {
-  position: absolute;
   bottom: 0;
+  margin-top: 0;
 
 }
 
@@ -94,7 +94,6 @@ h2 {
 #profile-container {
   margin-right: 250px;
   margin-left: 250px;
-  margin-top: 290px;
 }
 
 #profile-img {
@@ -116,9 +115,6 @@ h2 {
   width: 100%;
 }
 
-#test {
-  border: 1px solid;
-}
 
 
 

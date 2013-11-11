@@ -1,17 +1,40 @@
 <div id="div-banner">
-  <img src="assets/vdub.jpg" alt="vdub" id="img-banner">
+  <img src="assets/nyc.jpg" alt="banner img" id="img-banner">
   <div id="nav"><a href="/user/trip">Create Trip</a></div>
 </div>
 
 <div id="profile-container">
   <div id="test">
     <img src="assets/samurai.jpg" alt="face" id="profile-img">
-    <h1>Welcome user!</h1>
+    <h1>Welcome, <%= @user.username %>!</h1>
   </div>
   <div id="profile-content">
     <h3>The Bio</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, perspiciatis, illum, quas delectus nihil id minima tempora deleniti voluptatum vel sequi reiciendis cupiditate itaque ex molestias perferendis quibusdam voluptatibus explicabo!
     </p>
+  </div>
+  <div id="user-trips">
+    <h1>My Trips!</h1>
+    <table>
+      <thead>
+        <td>Date</td>
+        <td>Time</td>
+        <td>Location</td>
+        <td>Destination</td>
+        <td>Spaces</td>
+      </thead>
+      <% current_user.trips.each do |trip| %>
+      <tbody>
+        <tr>
+          <td><%= trip.date %></td>
+          <td><%= trip.time %></td>
+          <td><%= trip.location %></td>
+          <td><%= trip.destination %></td>
+          <td><%= trip.spaces %></td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
   </div>
 </div>
