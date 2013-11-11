@@ -7,7 +7,7 @@ class CreateTrips < ActiveRecord::Migration
       t.string :destination, :null => false
       t.integer :spaces, :null => false
       t.text :info
-      t.belongs_to :users
+      t.belongs_to :user
 
       t.timestamps
     end

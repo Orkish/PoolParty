@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20131108200705) do
     t.string   "destination", null: false
     t.integer  "spaces",      null: false
     t.text     "info"
-    t.integer  "users_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
