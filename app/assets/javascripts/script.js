@@ -21,9 +21,6 @@ $(function() {
   $button_signup.on("click", shiftTwo);
 });
 
-
-
-
 //// Javier's code /////////
 function updateSize() { 
   var windowW = $(window).width(); 
@@ -37,6 +34,7 @@ function updateSize() { 
 $(function() {
   updateSize();
 });
+
 
 
 
