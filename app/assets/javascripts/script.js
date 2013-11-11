@@ -21,21 +21,12 @@ $(function() {
   $button_signup.on("click", shiftTwo);
 });
 
-//// Javier's code /////////
-function updateSize() { 
-  var windowW = $(window).width(); 
-  var windowH = $(window).height(); 
-  var windowAspect = windowW/windowH;
-
-  console.log(windowW);
-  console.log(windowH);
-}
+///////// date picker calendar ////////
 
 $(function() {
-  updateSize();
+  $( "#datepicker" ).datepicker();
+  $.datepicker.setDefaults( $.datepicker.regional[ "" ] );
 });
-
-
 
 
 

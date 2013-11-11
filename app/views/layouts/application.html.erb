@@ -10,12 +10,11 @@
   <script src="//vjs.zencdn.net/4.2/video.js"></script>
 </head>
 <body>
-	<% if user_signed_in? %>
-		<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
-	<% end %>
 	<p class="notice" id="notice"><%= notice %></p>
 	<p class="alert" id="alert"><%= alert %></p>
 <%= yield %>
-
+<% if user_signed_in? %>
+  <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+<% end %>
 </body>
 </html> 

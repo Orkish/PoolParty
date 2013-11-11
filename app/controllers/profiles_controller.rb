@@ -10,4 +10,16 @@ class ProfilesController < ApplicationController
 		end
   end
 
+  def new
+    @trip = Trip.new
+    # if @trip.save
+    #   redirect_to user_path
+    # end
+  end
+
+  def create
+    
+
+  end
+
 end

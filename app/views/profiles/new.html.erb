@@ -1,0 +1,9 @@
+Creating a new trip!
+<%= form_for @trip do |f| %>
+  Select a date: <input type="text" id="datepicker" /><br />
+  Select a time: <%= f.select :time, ["7:00am", "7:15am", "7:30am", "7:45am", "8:00am"] %><br />
+  Select a location: <%= f.text_field :location %><br />
+  Select a destination: <%= f.text_field :destination %><br />
+  How many spaces are available: <%= f.text_field :spaces %><br />
+  <%= f.submit %>
+<% end %>
