@@ -25,18 +25,18 @@ $(function() {
 
 
 ////// Javier's code /////////
-function updateSize() { 
-  var windowW = $(window).width(); 
-  var windowH = $(window).height(); 
-  var windowAspect = windowW/windowH;
+// function updateSize() { 
+//   var windowW = $(window).width(); 
+//   var windowH = $(window).height(); 
+//   var windowAspect = windowW/windowH;
 
-  console.log(windowW);
-  console.log(windowH);
-}
+//   console.log(windowW);
+//   console.log(windowH);
+// }
 
-$(function() {
-  updateSize();
-});
+// $(function() {
+//   updateSize();
+// });
 
 
 
