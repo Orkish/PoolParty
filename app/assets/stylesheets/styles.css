@@ -1,3 +1,5 @@
+/******** devise ***********/
+
 /******* splash page ********/
 /*@import url(http://fonts.googleapis.com/css?family=Raleway:300);
 @import url(http://fonts.googleapis.com/css?family=Quicksand:400);
@@ -126,12 +128,19 @@ tr {
 
 /****** profile page ******/
 
+#profile-logo {
+  font-family: 'Poiret One';
+  padding: 0 0 10px 10px;
+}
+
+/*
 #div-banner {
   height: 440px;
-  /*position: absolute;*/
+  position: absolute;
   width: 100%;
   z-index: -1;
 }
+*/
 
 #img-banner {
   height: 440px;
@@ -142,31 +151,45 @@ tr {
   /*background-color: rgba(0, 0, 0, .6);*/
   bottom: 0;
   margin-top: 0;
+  margin-left: 430px;
   height: 40px;
   width: 100%;
+}
+
+#profile-div {
+  margin-top: -200px;
+  margin-left: -50px;
+}
+
+#profile-img {
+  border: 3px solid white;
+  border-radius: 50%;
+  height: 200px;
+  margin-right: 250px;
+  margin-left: 250px;
+  padding: 1px;
+  width: 200px;
 }
 
 #profile-container {
   margin-right: 250px;
   margin-left: 250px;
+  text-align: center;
 }
-
-#profile-img {
-  border-radius: 50%;
-  height: 150px;
-  width: 150px;
-}
-
-#profile-content {
-  color: white;
-  background-color: rgba(0, 0, 0, .7);
-  margin-top: 15px;
-  width: 500px;
-}
-
 
 /******* trip form ********/
 
 .trip-form {
   background-color: lightblue;
 }
+
+
+
+
+
+
+
+
+
+
+
