@@ -1,12 +1,12 @@
 <div id="div-banner">
   <img src="assets/nyc.jpg" alt="banner img" id="img-banner">
-  <div id="nav"><a href="/user/trip">Create Trip</a></div>
+  <div id="nav"><a href="/new">Create Trip</a></div>
 </div>
 
 <div id="profile-container">
   <div id="test">
     <img src="assets/samurai.jpg" alt="face" id="profile-img">
-    <h1>Welcome, <%= @user.username %>!</h1>
+    <h1>Welcome, <%= current_user.username %>!</h1>
   </div>
   <div id="profile-content">
     <h3>The Bio</h3>

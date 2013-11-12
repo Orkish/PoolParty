@@ -26,7 +26,15 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    
-
+    @trip = Trip.create(trip_params)
+    current_user.trips << @trip
+    render "profiles/index"
   end
+
+  private
+
+  def trip_params
+    params.require(:trip).permit(:date, :time, :location, :destination, :spaces, :info)
+  end
+
 end
