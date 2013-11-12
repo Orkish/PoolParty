@@ -2,15 +2,22 @@
   <div id="splash-first">
     <div id="splash-home">
       <h1>IT'S A POOL PARTY!</h1>
+      <div class="sign-in">
+      <table>
       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+
+          <tr>
+            <td><%= f.label "E-mail: " %></td>
+            <td><%= f.email_field :email, :autofocus => true %></td>
+          </tr>
+          <tr>
+            <td><%= f.label "Password: " %></td>
+            <td><%= f.password_field :password %></td>
+          </tr>
+      </table>
+      </div>
         <div class="sign-in">
-          <%= f.label "E-mail: " %>
-          <%= f.email_field :email, :autofocus => true %></br></br>
-          <%= f.label "Password: " %>
-          <%= f.password_field :password %>
-        </div>
-        <div class="sign-in">
-          <%= f.submit "Sign in", :class => "sign-in-button" %>
+          <%= f.submit "Sign in", :class => "form-button" %>
         </div>
       <% end %>
 
@@ -20,7 +27,7 @@
       <video id="example-video-1" class="video-js vjs-default-skin splash"
         preload="auto" loop="true" autoplay preload="auto" height="550" width="100%"
         poster="http://video-js.zencoder.com/oceans-clip.png"
-        data-setup='{"example_option":true}'>
+        data-setup='{"example_option":true}' muted="true">
         <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
         <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
         <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
@@ -37,36 +44,41 @@
   </div>
   <div id="splash-third">
     <div id="splash-signup">
-    	<h2>Sign up</h2>
-
+    	<h2>Sign up for Pool Party!</h2>
+      <table>
 			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   			<%= devise_error_messages! %>
-  
-			  <div><%= f.label :firstname %><br />
-			  <%= f.text_field :firstname %></div>  
-			  
-			  <div><%= f.label :lastname %><br />
-			  <%= f.text_field :lastname %></div> 
-
-			  <div><%= f.label :username %><br />
-			  <%= f.text_field :username %></div>
-
-			  <div><%= f.label :email %><br />
-			  <%= f.email_field :email %></div>
-
-			  <div><%= f.label :phone %><br />
-			  <%= f.text_field :phone %></div> 
-
-			  <div><%= f.label :password %><br />
-			  <%= f.password_field :password %></div>
-
-			  <div><%= f.label :password_confirmation %><br />
-			  <%= f.password_field :password_confirmation %></div>
-
-			  <div><%= f.submit "Sign up" %></div>
-			<% end %>
-
-			<%= render "devise/shared/links" %>
+			  <tr>
+          <td><%= f.label "firstname: " %></td>
+          <td><%= f.text_field :firstname %></td>
+        </tr>  
+        <tr>
+			  <td><%= f.label "lastname: " %></td>
+			  <td><%= f.text_field :lastname %></td>
+        </tr>
+        <tr>
+			  <td><%= f.label "username: " %></td>
+			  <td><%= f.text_field :username %></td>
+        </tr>
+        <tr>
+			  <td><%= f.label "email: " %></td>
+			  <td><%= f.email_field :email %></td>
+        </tr>
+			  <tr>
+          <td><%= f.label "phone: " %></td>
+          <td><%= f.text_field :phone %></td> 
+        </tr>
+			  <tr>
+          <td><%= f.label "password: " %></td>
+          <td><%= f.password_field :password %></td>
+        </tr>
+			  <tr>
+          <td><%= f.label "Confirm password: " %></td>
+          <td><%= f.password_field :password_confirmation %></td>
+        </tr>
+      </table>
+      <div class="sign-in"><%= f.submit "Sign up", :class => 'form-button' %></div>
+      <% end %>
     </div>
   </div>
 

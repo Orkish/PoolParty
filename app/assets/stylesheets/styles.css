@@ -36,6 +36,13 @@ h1 {
   top: 0;
 }
 
+.form-button {
+  font-family: 'Poiret One';
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 #main-container {
   height: 100%;
   width: 100%;
@@ -44,15 +51,10 @@ h1 {
 
 .sign-in{
   font-family: 'Poiret One';
+  font-weight: bold;
   margin-top: 15px;
 }
 
-.sign-in-button {
-  font-family: 'Poiret One';
-  font-weight: 600;
-  padding: 5px;
-  border-radius: 5px;
-}
 
 #splash-about {
   color: white;
@@ -74,7 +76,6 @@ h1 {
   position: relative;
   text-align: center;
   margin: 0 auto;
-  top: 40%;
   z-index: 100;
 }
 
@@ -92,12 +93,35 @@ h1 {
   top: 100%;
 }
 
-#splash-third {
+#splash-signup {
+  font-family: 'Poiret One';
   background-color: lightblue;
+  border: 1px solid #3498db;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 20px;
+  margin: 1px;
+}
+
+#splash-signup h2 {
+  font-size: 2em;
+  padding-bottom: 10px;
+
+}
+
+#splash-third {
   height: 100%;
   width: 100%;
   position: absolute;
   top: 200%;
+}
+
+table {
+  margin: 0 auto;
+}
+
+tr {
+  line-height: 30px;
 }
 
 /****** profile page ******/

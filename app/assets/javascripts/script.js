@@ -3,6 +3,8 @@ var $scoll_position,
     $button_aboutus;
 
 
+//----------SPLASH PAGE SCROLL---------------------//
+
 function shiftOne() {
     $doc.animate({scrollTop: $height/3 });
 }
@@ -21,7 +23,48 @@ $(function() {
   $button_signup.on("click", shiftTwo);
 });
 
-///////////////// AJAX CALLS //////////////////
+//---------SPLASH PAGE VERTICAL CENTER---------------//
+
+var $div_top,
+    $div_mid,
+    $div_bottom;
+
+$(function(){
+  $div_top = $('#splash-first');
+  $div_mid = $('#splash-second');
+  $div_bottom = $('#splash-third');
+
+  var $div_top_content = $('#splash-home');
+  var $div_mid_content = $('#splash-about');
+  var $div_bottom_content = $('#splash-signup');
+
+  var top_margin_top = ($div_top.height() - $div_top_content.height()) / 2;
+  var top_margin_mid = ($div_mid.height() - $div_mid_content.height()) / 2;
+  var top_margin_bottom = ($div_bottom.height() - $div_bottom_content.height()) / 2;
+  
+  $div_top_content.css('margin-top', top_margin_top + "px");
+  $div_mid_content.css('margin-top', top_margin_mid + "px");
+  $div_bottom_content.css('margin-top', top_margin_bottom + "px");
+
+  $(window).resize(function(){
+
+    var $div_top_content = $('#splash-home');
+    var $div_mid_content = $('#splash-about');
+    var $div_bottom_content = $('#splash-signup');
+
+    var top_margin_top = ($div_top.height() - $div_top_content.height()) / 2;
+    var top_margin_mid = ($div_mid.height() - $div_mid_content.height()) / 2;
+    var top_margin_bottom = ($div_bottom.height() - $div_bottom_content.height()) / 2;
+    
+    $div_top_content.css('margin-top', top_margin_top + "px");
+    $div_mid_content.css('margin-top', top_margin_mid + "px");
+    $div_bottom_content.css('margin-top', top_margin_bottom + "px");
+
+  });
+
+})
+
+//-----------AJAX CALLS FOR TRIP PAGE----------------//
 var $trip_row,
     $trip_show;
 
@@ -54,8 +97,8 @@ $(function(){
 
 ///////// date picker calendar ////////
 
-$(function() {
-  $( "#datepicker" ).datepicker();
-  $.datepicker.setDefaults( $.datepicker.regional[ "" ] );
-});
+// $(function() {
+//   $( "#datepicker" ).datepicker();
+//   $.datepicker.setDefaults( $.datepicker.regional[ "" ] );
+// });
 
