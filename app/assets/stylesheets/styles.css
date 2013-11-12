@@ -15,6 +15,14 @@ h1 {
   font-size: 4em;
 }
 
+h1 h2 h3 h4 h5 h6 {
+  font-family: Helvetica;
+}
+
+p {
+  font-family: Garamond;
+}
+
 .button {
   color: white;
   font-family: 'Poiret One';
@@ -35,6 +43,8 @@ h1 {
 
 #example-video-1 {
   position: absolute;
+  height: 100%;
+  width: 100%;
   top: 0;
 }
 
@@ -58,13 +68,6 @@ h1 {
 }
 
 
-#splash-about {
-  color: white;
-  background-color: rgba(0, 0, 0, .7);
-  width: 150px;
-  height: 200px;
-}
-
 #splash-first {
   height: 100%;
   width: 100%;
@@ -87,6 +90,8 @@ h1 {
   letter-spacing: 1px;
 }
 
+/******* about us section *******/
+
 #splash-second {
   background-color: lightgreen;
   height: 100%;
@@ -94,6 +99,19 @@ h1 {
   position: absolute;
   top: 100%;
 }
+
+#splash-about {
+  font-family: 'Poiret One';
+  background-color: lightblue;
+  border: 1px solid #3498db;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 20px;
+  margin: 1px;
+  width: 450px;
+}
+
+/****** sign up section ******/
 
 #splash-signup {
   font-family: 'Poiret One';
@@ -143,7 +161,7 @@ tr {
 */
 
 #img-banner {
-  height: 440px;
+  height: 400px;
   width: 100%;
 }
 
@@ -151,9 +169,8 @@ tr {
   /*background-color: rgba(0, 0, 0, .6);*/
   bottom: 0;
   margin-top: 0;
-  margin-left: 430px;
+  margin-left: 35%;
   height: 40px;
-  width: 100%;
 }
 
 #profile-div {
@@ -179,10 +196,33 @@ tr {
 
 /******* trip form ********/
 
+.form-container {
+  padding-top: 15px;
+  padding-left: 20px;
+}
+
 .trip-form {
   background-color: lightblue;
 }
 
+.side-bar {
+  background-color: #ffffff;
+  bottom: 30px;
+  opacity: 0.5;
+  filter: alpha(opacity=40);
+  position: fixed;
+  right: -270px;
+  top: 280px;
+  width: 300px;
+  height: 300px;
+  z-index: 1000;
+
+  -webkit-border-radius: 15px 0px 0px 15px;
+  border-radius: 15px 0px 0px 15px;
+
+  -webkit-box-shadow: -10px 0px 10px 0px rgba(0, 0, 0, .3);
+  box-shadow: -10px 0px 10px 0px rgba(0, 0, 0, .3);
+}
 
 /********* TRIP PAGE ***********/
 

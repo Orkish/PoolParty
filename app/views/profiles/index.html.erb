@@ -1,5 +1,5 @@
 <div id="div-banner">
-  <h1 id="profile-logo">Pool Party!</h1>
+  <h2 id="profile-logo">Pool Party!</h2>
   <img src="assets/nyc.jpg" alt="banner img" id="img-banner">
   <div id="nav">
     <a href="/new">Create Trip</a> | 
@@ -43,3 +43,38 @@
     </table>
   </div>
 </div>
+<div id="trip-form" class="side-bar">
+  <div class="form-container">
+      Creating a new trip!
+      <% trip = Trip.new %>
+    <%= form_for trip do |f| %>
+      <!-- Select a date: <input type="text" id="datepicker" /><br /> -->
+      Pick a date: <%= f.date_field :date %><br />
+      Select a time: <%= f.select :time, ["7:00am", "7:15am", "7:30am", "7:45am", "8:00am"] %><br />
+      Select a location: <%= f.text_field :location %><br />
+      Select a destination: <%= f.text_field :destination %><br />
+      How many spaces are available: <%= f.text_field :spaces %><br />
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
