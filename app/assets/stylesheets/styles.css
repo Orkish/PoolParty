@@ -1,4 +1,9 @@
 /******* splash page ********/
+/*@import url(http://fonts.googleapis.com/css?family=Raleway:300);
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400);
+*/
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
 * {
   margin: 0;
   padding: 0;
@@ -8,27 +13,38 @@ h1 {
   font-size: 4em;
 }
 
+.button {
+  color: white;
+  font-family: 'Poiret One';
+  font-weight: 700;
+  border: 1px solid;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 10px;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  background-color: white;
+  color: black;
+}
+
 #example-video-1 {
   position: absolute;
   top: 0;
-}
-
-.button {
-  border: 1px solid;
-}
-
-#button-signup {
-  color: white;
-  position: absolute;
-  margin-top: 250px;
-  margin-left: 530px;
-  text-align: center;
 }
 
 #main-container {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+.sign-in{
+  font-family: 'Poiret One';
+  margin-top: 15px;
 }
 
 #splash-about {
@@ -53,6 +69,12 @@ h1 {
   margin: 0 auto;
   top: 40%;
   z-index: 100;
+}
+
+#splash-home h1 {
+  font-family: 'Poiret One';
+  /*font-weight: 700;*/
+  letter-spacing: 1px;
 }
 
 #splash-second {
@@ -80,14 +102,16 @@ h1 {
   z-index: -1;
 }
 
-#nav {
-  bottom: 0;
-  margin-top: 0;
-
-}
-
 #img-banner {
   height: 440px;
+  width: 100%;
+}
+
+#nav {
+  /*background-color: rgba(0, 0, 0, .6);*/
+  bottom: 0;
+  margin-top: 0;
+  height: 40px;
   width: 100%;
 }
 
@@ -109,35 +133,9 @@ h1 {
   width: 500px;
 }
 
-#nav {
-  /*background-color: rgba(0, 0, 0, .6);*/
-  height: 40px;
-  width: 100%;
-}
-
 
 /******* trip form ********/
 
 .trip-form {
   background-color: lightblue;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -2,30 +2,20 @@
   <div id="splash-first">
     <div id="splash-home">
       <h1>IT'S A POOL PARTY!</h1>
-      <h3>Sign in</h3>
-
       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-        <div>
-          <%= f.label :email %>
-          <%= f.email_field :email, :autofocus => true %>
-          <%= f.label :password %>
+        <div class="sign-in">
+          <%= f.label "E-mail: " %>
+          <%= f.email_field :email, :autofocus => true %></br></br>
+          <%= f.label "Password: " %>
           <%= f.password_field :password %>
         </div>
-
-        <% if devise_mapping.rememberable? -%>
-          <div>
-            <%= f.check_box :remember_me %> <%= f.label :remember_me %>
-          </div>
-        <% end %>
-
-        <div>
+        <div class="sign-in">
           <%= f.submit "Sign in" %>
         </div>
       <% end %>
 
       <span class="button" id="button-aboutus">About Us</span>
     </div>
-    <h2>Sign in</h2>
     <div>
       <video id="example-video-1" class="video-js vjs-default-skin splash"
         preload="auto" loop="true" autoplay preload="auto" height="550" width="100%"
@@ -38,12 +28,12 @@
     <div>
   </div>
   <div id="splash-second">
-    <h3 class="button" id="button-signup">Sign up</h3>
     <div id="splash-about">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, eaque, reiciendis, non, dicta ab perspiciatis nemo saepe natus mollitia maiores cum illum in numquam. Similique pariatur deserunt debitis culpa quis.
       </p>
     </div>
+    <span class="button" id="button-signup">Sign up</span>
   </div>
   <div id="splash-third">
     <div id="splash-signup">
