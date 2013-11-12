@@ -102,3 +102,60 @@ $(function(){
 //   $.datepicker.setDefaults( $.datepicker.regional[ "" ] );
 // });
 
+////////// trip form //////////////
+
+
+var $side_menu,
+    animation_duration;
+
+function animateMenuIn() {
+  $side_menu.stop().animate({
+      right: '0px',
+      opacity: 1
+    },
+    animation_duration,
+    function() {
+      $side_menu.addClass('active');
+    }
+  );
+}
+function animateMenuOut() {
+  $side_menu.stop().animate({right: '-270px', opacity: 0.5}, animation_duration);
+  $side_menu.removeClass('active');
+}
+
+$(function() {
+  animation_duration = 500;
+  $side_menu = $('#trip-form');
+
+  $side_menu.on("mouseover", animateMenuIn);
+  $side_menu.on("mouseout", animateMenuOut);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
