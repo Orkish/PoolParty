@@ -31,6 +31,13 @@ class ProfilesController < ApplicationController
     render "profiles/index"
   end
 
+  def send_sms
+    trip_owner = User.find(params[:id])
+    respond_to do |format|
+      format.json {render :json => {driver: trip_owner.username, phone: trip_owner.phone}}
+    end
+  end
+
   private
 
   def trip_params

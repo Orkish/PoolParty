@@ -184,12 +184,43 @@ tr {
 }
 
 
+/********* TRIP PAGE ***********/
 
+.request {
+  border: 1px solid black;
+  border-radius: 10px;
+}
 
+.request:hover {
+  cursor: pointer;
+}
 
+#show-trip {
+  font-family: 'Poiret One';
+  font-size: 1.5em;
+  margin: 0 auto;
+  display: inline-block;
+  border: 1px solid;
+}
 
+.table-headers {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+}
 
+.trips {
+  text-align: center;
+}
 
+.trip-table {
+  font-family: 'Poiret One';
+  font-weight: bold;
+  margin-top: 15px;
+  display: inline-block;
+  border: 1px solid;
+}
 
-
-
+.trip-table td {
+  width: 120px;
+}

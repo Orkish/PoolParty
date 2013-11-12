@@ -66,11 +66,8 @@ $(function(){
 
 //-----------AJAX CALLS FOR TRIP PAGE----------------//
 var $trip_row,
-    $trip_show;
-
-function appendData(trip){
-  $trip_show.text("Date: " + trip.date);
-};
+    $trip_show,
+    $request;
 
 $(function(){
   $trip_row = $('.trips');
@@ -78,7 +75,7 @@ $(function(){
 
   $trip_row.on("click", function(){
     $.ajax({
-      url: '/' + $(this).attr("id"),
+      url: '/trip/' + $(this).data("trip_id"),
       method: 'GET',
       datatype: 'json'
     }).success(function(data){
@@ -89,9 +86,25 @@ $(function(){
         + "Spaces: " + data.spaces + "<br></div>"
 
         ));
-      console.log(data);
+      // console.log(data);
     });
-    console.log($(this).attr("id"));
+    // console.log($(this).attr("id"));
+  });
+})
+
+$(function(){
+  $request = $('.request');
+
+  $request.on("click", function(e){
+    // Stops the bubbling!!
+    e.stopPropagation();
+    console.log($(this).parent().data("user_id"));
+    $.ajax({
+      url: '/request/driver/' + $(this).parent().data("user_id"),
+      method: 'GET'
+    }).done(function(data){
+      console.log(data);
+    })
   });
 })
 
