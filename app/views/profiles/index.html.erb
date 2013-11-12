@@ -1,19 +1,24 @@
 <div id="div-banner">
+  <h1 id="profile-logo">Pool Party!</h1>
   <img src="assets/nyc.jpg" alt="banner img" id="img-banner">
-  <div id="nav"><a href="/new">Create Trip</a></div>
+  <div id="nav">
+    <a href="/new">Create Trip</a> | 
+    <a href="/new">About Us</a> |
+    <a href="/new">View All Trips</a> |
+    <% if user_signed_in? %>
+      <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+    <% end %>
+  </div>
 </div>
-
+<div id="profile-div">
+  <img src="assets/samurai.jpg" alt="face" id="profile-img">
+</div>
 <div id="profile-container">
-  <div id="test">
-    <img src="assets/samurai.jpg" alt="face" id="profile-img">
-    <h1>Welcome, <%= current_user.username %>!</h1>
-  </div>
-  <div id="profile-content">
-    <h3>The Bio</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, perspiciatis, illum, quas delectus nihil id minima tempora deleniti voluptatum vel sequi reiciendis cupiditate itaque ex molestias perferendis quibusdam voluptatibus explicabo!
-    </p>
-  </div>
+  <h1>Welcome, <%= current_user.username %>!</h1>
+  <h3>The Bio</h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, perspiciatis, illum, quas delectus nihil id minima tempora deleniti voluptatum vel sequi reiciendis cupiditate itaque ex molestias perferendis quibusdam voluptatibus explicabo!
+  </p>
   <div id="user-trips">
     <h1>My Trips!</h1>
     <table>
