@@ -118,6 +118,8 @@ $(function(){
 
 ////////// trip form //////////////
 
+//reloads this part of code when page refreshes!
+// document.addEventListener("page:change", function(){
 
 var $side_menu,
     animation_duration;
@@ -147,6 +149,7 @@ $(function() {
 
 });
 
+// });
 
 
 
