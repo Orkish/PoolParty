@@ -79,11 +79,11 @@ $(function(){
       method: 'GET',
       datatype: 'json'
     }).success(function(data){
-      $trip_show.empty().append($("<div>Date: " + data.date + "<br>"
-        + "Time: " + data.time + "<br>"
-        + "Location: " + data.location + "<br>"
-        + "Destination: " + data.destination + "<br>"
-        + "Spaces: " + data.spaces + "<br></div>"
+      $trip_show.empty().append($("<table><tr><td><strong>Date</strong>:</td>" + "<td>" + data.date + "</td></tr>"
+        + "<tr><td><strong>Time:</strong></td>" + "<td>" + data.time + "</td></tr>"
+        + "<tr><td><strong>Location:</strong></td>" + "<td>" + data.location + "</td></tr>"
+        + "<tr><td><strong>Destination:</strong></td>" + "<td>" + data.destination + "</td></tr>"
+        + "<tr><td><strong>Spaces:</strong></td>" + "<td>" + data.spaces + "</td></tr></table>"
 
         ));
       // console.log(data);
