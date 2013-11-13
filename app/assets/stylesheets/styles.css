@@ -104,7 +104,7 @@ p {
 /******* about us section *******/
 
 html {
-  background-color: rgba(52, 73, 94, .5);
+  /*background-color: rgba(52, 73, 94, .5);*/
 }
 
 #logo {
@@ -214,6 +214,7 @@ tr {
 }
 
 #nav a {
+  color: inherit;
   font-size: 20px;
   padding: 0 10px 0px 10px;
   text-decoration: none;
@@ -235,7 +236,7 @@ tr {
 }
 
 #image-uploader {
-  display: none;
+  /*display: none;*/
   position: absolute;
 }
 
@@ -248,6 +249,7 @@ tr {
 
 .header-font {
   font-family: Helvetica, sans-serif;
+  margin-top: 25px;
 }
 
 .body-font {
@@ -258,7 +260,7 @@ tr {
 
 } 
 
-#profile-content {
+.profile-content {
   background-color: rgba(236, 240, 241,1.0);
   border: 1px solid;
   border-radius: 15px;

@@ -36,7 +36,7 @@
   <div>
     <h2 class="header-font">
       Welcome, <%= current_user.username %>, Your Bio:</h2>
-    <div id="profile-content">
+    <div class="profile-content">
       <p class="body-font">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, perspiciatis, illum, quas delectus nihil id minima tempora deleniti voluptatum vel sequi reiciendis cupiditate itaque ex molestias perferendis quibusdam voluptatibus explicabo!
       </p>
@@ -44,26 +44,28 @@
   </div>
   <div>
     <h2 class="header-font">My Trips!</h2>
-    <table>
-      <thead class="header-font">
-        <td>Date</td>
-        <td>Time</td>
-        <td>Location</td>
-        <td>Destination</td>
-        <td>Spaces</td>
-      </thead>
-      <% current_user.trips.each do |trip| %>
-      <tbody class="body-font">
-        <tr>
-          <td><%= trip.date %></td>
-          <td><%= trip.time %></td>
-          <td><%= trip.location %></td>
-          <td><%= trip.destination %></td>
-          <td><%= trip.spaces %></td>
-        </tr>
-      </tbody>
-      <% end %>
-    </table>
+    <div class="profile-content">
+      <table>
+        <thead class="header-font">
+          <td>Date</td>
+          <td>Time</td>
+          <td>Location</td>
+          <td>Destination</td>
+          <td>Spaces</td>
+        </thead>
+        <% current_user.trips.each do |trip| %>
+        <tbody class="body-font">
+          <tr>
+            <td><%= trip.date %></td>
+            <td><%= trip.time %></td>
+            <td><%= trip.location %></td>
+            <td><%= trip.destination %></td>
+            <td><%= trip.spaces %></td>
+          </tr>
+        </tbody>
+        <% end %>
+      </table>
+    </div>
   </div>
 </div>
 <div id="trip-form" class="side-bar">

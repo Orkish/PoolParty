@@ -23,7 +23,7 @@ class ProfilesController < ApplicationController
   def create
     @trip = Trip.create(trip_params)
     current_user.trips << @trip
-    render "profiles/index"
+    redirect_to "/profiles/index"
   end
 
   def send_sms
@@ -46,7 +46,9 @@ class ProfilesController < ApplicationController
   end
 
   def user_edit
-    user = User.find(params[:user])
+    current_user.update_attributes(params[:user])
+    current_user.save
+    redirect_to "/profiles"
   end
 
 end
