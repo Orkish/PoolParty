@@ -134,7 +134,7 @@ function animateMenuIn() {
   );
 }
 function animateMenuOut() {
-  $side_menu.stop().animate({right: '-270px', opacity: 0.5}, animation_duration);
+  $side_menu.stop().animate({right: '-280px', opacity: 0.5}, animation_duration);
   $side_menu.removeClass('active');
 }
 
