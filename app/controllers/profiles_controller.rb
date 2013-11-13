@@ -32,8 +32,9 @@ class ProfilesController < ApplicationController
     number = trip_owner.phone
     driver = trip_owner.username
     passenger_number = current_user.phone
+    passenger_name = current_user.username
     @client = Twilio::REST::Client.new ENV['TWIL_ID'], ENV['TWIL_TOKEN']
-    @message = @client.account.messages.create({:to => "+1"+"#{number}", :from => "+13475805712", :body => "Howdy! Please Contact #{current_user} at #{passenger_number}"})
+    @message = @client.account.messages.create({:to => "+1"+"#{number}", :from => "+13475805712", :body => "Howdy! Please Contact #{passenger_name} at #{passenger_number}"})
     respond_to do |format|
       format.json {render :json => {driver: driver, phone: number}}
     end
