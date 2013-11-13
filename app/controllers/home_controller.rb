@@ -2,7 +2,9 @@ class HomeController < ApplicationController
 	def splash
 		if user_signed_in?
 			@user = current_user
-			render "profiles/index"
+			redirect_to "/profile"
+		else
+			# redirect_to "/"
 		end
 	end
 
