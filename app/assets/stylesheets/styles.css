@@ -312,11 +312,14 @@ tr {
 }
 
 #show-trip {
+  background-color: rgba(236, 240, 241, .6);
+  display: none;
+  text-align: center;
   font-family: 'Poiret One';
   font-size: 1.5em;
-  margin: 0 auto;
   display: inline-block;
   border: 1px solid;
+  vertical-align: top;
 }
 
 .table-headers {
@@ -337,12 +340,6 @@ tr {
   margin-top: 15px;
   text-align: center;
   /*display: inline-block;*/
-}
-
-#show-trip {
-  background-color: rgba(236, 240, 241, .6);
-  display: none;
-  text-align: center;
 }
 
 .trip-table td {
