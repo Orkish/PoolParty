@@ -79,12 +79,11 @@ $(function(){
       method: 'GET',
       datatype: 'json'
     }).success(function(data){
-      $trip_show.empty().append($("<table><tr><td><strong>Date</strong>:</td>" + "<td>" + data.date + "</td></tr>"
+      $trip_show.empty().append($("<h2> Additional Trip Info</h2>" + "<table><tr><td><strong>Date</strong>:</td>" + "<td>" + data.date + "</td></tr>"
         + "<tr><td><strong>Time:</strong></td>" + "<td>" + data.time + "</td></tr>"
         + "<tr><td><strong>Location:</strong></td>" + "<td>" + data.location + "</td></tr>"
         + "<tr><td><strong>Destination:</strong></td>" + "<td>" + data.destination + "</td></tr>"
         + "<tr><td><strong>Spaces:</strong></td>" + "<td>" + data.spaces + "</td></tr></table>"
-
         ));
       // console.log(data);
     });
@@ -107,7 +106,7 @@ $(function(){
       console.log(data);
     });
   });
-})
+});
 
 ///////// date picker calendar ////////
 
@@ -155,7 +154,41 @@ $(function() {
 // });
 
 
+/////////// trips page /////////////
+$(function() {
+  $(".trips").click(function(e) {
+    e.stopPropagation();
+    $("#show-trip").show( "slow" );
+  });
+  $("html").click(function() {
+    $("#show-trip").hide( 1500 );
+  });
+});
 
+// $('.modal').on('click', function(){  
+//           var modal_id = $(this).attr('id').replace("-link","");  
+//           console.log(modal_id);
+//           show_modal(modal_id);
+//   });
+
+//   $('.close_modal').on('click', function(){  
+//         close_modal();  
+//   });  
+
+// function close_modal(){  
+//       $('#mask').fadeOut(500);  
+//       $('.modal-window').fadeOut(500);  
+// }  
+
+// function show_modal(modal_id){
+// $('#mask').fadeOut(0);  
+//       $('.modal-window').fadeOut(0);
+//       $('#mask').css({ 'display' : 'block', opacity : 0});  
+//       $('#mask').fadeTo(500,0.8);  
+//       $('#'+modal_id).fadeIn(500);  
+// }  
+
+// });
 
 
 
