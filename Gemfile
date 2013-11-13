@@ -23,6 +23,9 @@ group :test, :development do
   gem "rspec-rails", "~> 2.4"
 end
 
+#twilio
+gem 'twilio-ruby'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

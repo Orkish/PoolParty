@@ -103,8 +103,9 @@ $(function(){
       url: '/request/driver/' + $(this).parent().data("user_id"),
       method: 'GET'
     }).done(function(data){
+      console.log($(this));
       console.log(data);
-    })
+    });
   });
 })
 

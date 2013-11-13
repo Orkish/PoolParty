@@ -29,8 +29,13 @@ class ProfilesController < ApplicationController
 
   def send_sms
     trip_owner = User.find(params[:id])
+    number = trip_owner.phone
+    driver = trip_owner.username
+    passenger_number = current_user.phone
+    @client = Twilio::REST::Client.new ENV['TWIL_ID'], ENV['TWIL_TOKEN']
+    @message = @client.account.messages.create({:to => "+1"+"#{number}", :from => "+13475805712", :body => "Howdy! Please Contact #{driver} at #{passenger_number}"})
     respond_to do |format|
-      format.json {render :json => {driver: trip_owner.username, phone: trip_owner.phone}}
+      format.json {render :json => {driver: driver, phone: number}}
     end
   end
 
