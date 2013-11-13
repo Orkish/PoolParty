@@ -10,4 +10,6 @@ Poolparty::Application.routes.draw do
   get '/new', to: "profiles#new"
   post '/create', to: "profiles#create", as: "trips"
 
+  get '/request/driver/:id', to: "profiles#send_sms"
+
 end

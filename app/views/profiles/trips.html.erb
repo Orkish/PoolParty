@@ -1,8 +1,8 @@
-<div>
-	<h3>List of available trips!</h3>
-	<div>
+<div id="trip-container">
+	<h3>Available trips:</h3>
+	<div class="trip-table">
 		<table>
-			<thead>
+			<thead class="table-headers">
 				<td>Date</td>
 				<td>Time</td>
 				<td>Location</td>
@@ -11,23 +11,24 @@
 			</thead>
 		<% @trips.each do |trip| %>
 			<tbody>
-				<tr class="trips" id="trip/<%= trip.id %>">
+				<tr class="trips" data-trip_id="<%= trip.id %>" data-user_id="<%= trip.user_id %>">
 					<td><%= trip.date %></td>
 					<td><%= trip.time %></td>
 					<td><%= trip.location %></td>
 					<td><%= trip.destination %></td>
 					<td><%= trip.spaces %></td>
+					<td class="request" >Request a Ride!</td>
 				</tr>
 			</tbody>
 		<% end %>
 		</table>
 	</div>
-</span>
 
-<div id="show-trip">
-	Scheduled rides appear here.
+
+	<div id="show-trip">
+		Select a Trip to view details.
+	</div>
 </div>
-
 <!--   create_table "trips", force: true do |t|
     t.string   "date",        null: false
     t.string   "time",        null: false
