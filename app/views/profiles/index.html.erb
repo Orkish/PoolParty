@@ -14,13 +14,15 @@
   <img src="assets/samurai.jpg" alt="face" id="profile-img">
 </div>
 <div id="profile-container">
-  <h1>Welcome, <%= current_user.username %>!</h1>
-  <h3>The Bio</h3>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, perspiciatis, illum, quas delectus nihil id minima tempora deleniti voluptatum vel sequi reiciendis cupiditate itaque ex molestias perferendis quibusdam voluptatibus explicabo!
-  </p>
+  <div class="profile-content">
+    <h2>Welcome, <%= current_user.username %>!</h2>
+    <h3>The Bio</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, perspiciatis, illum, quas delectus nihil id minima tempora deleniti voluptatum vel sequi reiciendis cupiditate itaque ex molestias perferendis quibusdam voluptatibus explicabo!
+    </p>
+  </div>
   <div id="user-trips">
-    <h1>My Trips!</h1>
+    <h2>My Trips!</h2>
     <table>
       <thead>
         <td>Date</td>
@@ -45,7 +47,7 @@
 </div>
 <div id="trip-form" class="side-bar">
   <div class="form-container">
-      Creating a new trip!
+      <h2>Creating a new trip!</h2>
       <% trip = Trip.new %>
     <%= form_for trip do |f| %>
       <!-- Select a date: <input type="text" id="datepicker" /><br /> -->

@@ -67,6 +67,9 @@ p {
   margin-top: 15px;
 }
 
+.splash-video {
+  height: 100%;
+}
 
 #splash-first {
   height: 100%;
@@ -189,16 +192,32 @@ tr {
 }
 
 #profile-container {
-  margin-right: 250px;
-  margin-left: 250px;
+  margin-right: 150px;
+  margin-left: 150px;
   text-align: center;
+}
+
+.profile-content {
+  border: 1px solid;
+  line-height: 2.0;
+  float: left;
+  width: 400px;
+}
+
+#user-trips {
+  border: 1px solid;
+  line-height: 2.0;
+  float: right;
+  width: 400px;
 }
 
 /******* trip form ********/
 
 .form-container {
+  line-height: 2.0;
   padding-top: 15px;
   padding-left: 20px;
+  
 }
 
 .trip-form {
