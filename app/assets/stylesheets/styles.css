@@ -96,6 +96,17 @@ p {
 
 /******* about us section *******/
 
+html {
+  background-color: rgba(52, 73, 94, .5);
+}
+
+#logo {
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 5px;
+  width: 100px;
+}
+
 #splash-second {
   text-align: center;
   background-color: white;
@@ -216,20 +227,37 @@ tr {
   width: 200px;
 }
 
+#image-uploader {
+  display: none;
+  position: absolute;
+}
+
 #profile-container {
   margin-right: 300px;
-  margin-left: 150px;
+  margin-left: 300px;
   margin-top: 25px;
   text-align: center;
 }
 
-.profile-content {
+.header-font {
+  font-family: Helvetica, sans-serif;
+}
+
+.body-font {
+  font-family: Bodoni, serif;
+}
+
+#profile-container h2 {
+
+} 
+
+#profile-content {
   background-color: rgba(236, 240, 241,1.0);
   border: 1px solid;
   border-radius: 15px;
   line-height: 2.0;
-  float: left;
-  width: 400px;
+  margin-top: 25px;
+  padding: 20px;
 }
 
 #user-trips {
@@ -237,7 +265,6 @@ tr {
   border: 1px solid;
   border-radius: 15px;
   line-height: 2.0;
-  float: right;
   width: 400px;
 }
 
@@ -261,7 +288,7 @@ tr {
   filter: alpha(opacity=40);
   position: fixed;
   right: -280px;
-  top: 0;
+  top: 150px;
   width: 300px;
   height: 400px;
   z-index: 1000;

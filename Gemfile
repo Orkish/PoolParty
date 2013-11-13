@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'devise'
 # gem 'oauth'
+gem "rmagick"
+gem "carrierwave"
 
 
 # Use postgresql as the database for Active Record

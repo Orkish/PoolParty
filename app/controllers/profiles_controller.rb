@@ -12,10 +12,9 @@ class ProfilesController < ApplicationController
 
   def show
   trip = Trip.find(params[:id])
-  respond_to do |format|
-		format.json {render :json => {date: trip.date, time: trip.time, location: trip.location, destination: trip.destination, spaces: trip.spaces, info: trip.info}}
-	end
-
+    respond_to do |format|
+  		format.json {render :json => {date: trip.date, time: trip.time, location: trip.location, destination: trip.destination, spaces: trip.spaces, info: trip.info}}
+  	end
   end
 
   def new
@@ -46,4 +45,23 @@ class ProfilesController < ApplicationController
     params.require(:trip).permit(:date, :time, :location, :destination, :spaces, :info)
   end
 
+  def user_edit
+    user = User.find(params[:user])
+  end
+
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
