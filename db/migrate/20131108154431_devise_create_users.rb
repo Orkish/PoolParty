@@ -8,7 +8,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :phone, :null => false
       t.string :about
       ## Database authenticatable
-      t.string :email,              :null => false, :default => ""
+      t.string :email,              :null => false, :default => "", :unique => true
       t.string :encrypted_password, :null => false, :default => ""
 
       ## Recoverable

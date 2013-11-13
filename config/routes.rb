@@ -8,11 +8,12 @@ Poolparty::Application.routes.draw do
   get '/profile/trips', to: "profiles#trips"
   get '/trip/:id', to: "profiles#show"
   get '/new', to: "profiles#new"
+  get '/profile/index', to: "profiles#index"
 
   get '/request/driver/:id', to: "profiles#send_sms"
 
   ## Post Requests
   post '/create', to: "profiles#create", as: "trips"
-  patch '/', to: "profiles#user_edit", as: "user"
+  # put '/users', to: "profiles#user_edit", as: "user"
 
 end

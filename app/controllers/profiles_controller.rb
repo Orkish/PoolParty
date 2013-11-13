@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
 
   def index
+    @trip = Trip.new
   end
 
   def trips
@@ -45,8 +46,17 @@ class ProfilesController < ApplicationController
     params.require(:trip).permit(:date, :time, :location, :destination, :spaces, :info)
   end
 
+  def user_params
+    params.require(:user).permit(:username, :firstname, :lastname, :destination, :spaces, :info)
+  end
+
   def user_edit
-    current_user.update_attributes(params[:user])
+    form_data = params[:user]
+    puts form_data
+    if form_data[:email].blank? || form_data[:email] == ""
+      form_data[:email] = current_user.email
+    end
+    current_user.update_attributes(form_data)
     current_user.save
     redirect_to "/profiles"
   end
