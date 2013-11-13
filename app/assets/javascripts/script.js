@@ -147,6 +147,9 @@ $(function() {
   $side_menu.on("mouseover", animateMenuIn);
   $side_menu.on("mouseout", animateMenuOut);
 
+  // $(document).on('mouseover', '#trip-form', animateMenuIn);
+  // $(document).on('mouseout', '#trip-form', animateMenuOut)
+
 });
 
 // });
