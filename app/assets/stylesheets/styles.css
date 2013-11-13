@@ -104,11 +104,11 @@ p {
 }
 
 #splash-about {
-  font-family: 'Poiret One';
   background-color: lightblue;
   border: 1px solid #3498db;
   border-radius: 10px;
   display: inline-block;
+  font-family: 'Poiret One';
   padding: 20px;
   margin: 1px;
   width: 450px;
@@ -117,11 +117,12 @@ p {
 /****** sign up section ******/
 
 #splash-signup {
-  font-family: 'Poiret One';
   background-color: lightblue;
   border: 1px solid #3498db;
   border-radius: 10px;
   display: inline-block;
+  float: left;
+  font-family: 'Poiret One';
   padding: 20px;
   margin: 1px;
 }
@@ -133,6 +134,8 @@ p {
 }
 
 #splash-third {
+  background-image: url(dbzcarpool.jpg);
+  background-size: 980px;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -192,7 +195,7 @@ tr {
 }
 
 #profile-container {
-  margin-right: 150px;
+  margin-right: 300px;
   margin-left: 150px;
   text-align: center;
 }
@@ -230,8 +233,8 @@ tr {
   opacity: 0.5;
   filter: alpha(opacity=40);
   position: fixed;
-  right: -270px;
-  top: 280px;
+  right: -280px;
+  top: 200px;
   width: 300px;
   height: 300px;
   z-index: 1000;
@@ -283,3 +286,18 @@ tr {
 .trip-table td {
   width: 120px;
 }
+
+#spacing-bottom {
+  clear: both;
+  height: 200px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
