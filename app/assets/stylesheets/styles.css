@@ -154,7 +154,7 @@ tr {
 
 #profile-logo {
   font-family: 'Poiret One';
-  padding: 0 0 10px 10px;
+  padding: 10px 0 10px 10px;
 }
 
 /*
@@ -168,15 +168,24 @@ tr {
 
 #img-banner {
   height: 400px;
+  margin-bottom: -4px;
   width: 100%;
 }
 
 #nav {
-  /*background-color: rgba(0, 0, 0, .6);*/
   bottom: 0;
+  background-color: rgba(52, 73, 94, .7);
   margin-top: 0;
-  margin-left: 35%;
-  height: 40px;
+  margin-left: -55px;
+  padding-top: 5px;
+  height: 30px;
+  text-align: center;
+}
+
+#nav a {
+  font-size: 20px;
+  padding: 0 10px 0px 10px;
+  text-decoration: none;
 }
 
 #profile-div {
@@ -197,18 +206,23 @@ tr {
 #profile-container {
   margin-right: 300px;
   margin-left: 150px;
+  margin-top: 25px;
   text-align: center;
 }
 
 .profile-content {
+  background-color: rgba(236, 240, 241,1.0);
   border: 1px solid;
+  border-radius: 15px;
   line-height: 2.0;
   float: left;
   width: 400px;
 }
 
 #user-trips {
+  background-color: rgba(236, 240, 241,1.0);
   border: 1px solid;
+  border-radius: 15px;
   line-height: 2.0;
   float: right;
   width: 400px;
@@ -289,7 +303,7 @@ tr {
 
 #spacing-bottom {
   clear: both;
-  height: 200px;
+  height: 100px;
   width: 100%;
 }
 

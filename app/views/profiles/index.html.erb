@@ -2,9 +2,8 @@
   <h2 id="profile-logo">Pool Party!</h2>
   <img src="assets/nyc.jpg" alt="banner img" id="img-banner">
   <div id="nav">
-    <a href="/new">Create Trip</a> | 
-    <a href="/new">About Us</a> |
-    <a href="/new">View All Trips</a> |
+    <a href="/index">About Us</a> |
+    <a href="/profile/trips">View All Trips</a> |
     <% if user_signed_in? %>
       <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
     <% end %>
