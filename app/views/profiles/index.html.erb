@@ -51,16 +51,19 @@
 </div>
 <div id="trip-form" class="side-bar">
   <div class="form-container">
-      <h2>Creating a new trip!</h2>
+    <h2>Creating a new trip!</h2>
+      
     <%= form_for @trip do |f| %>
-      <!-- Select a date: <input type="text" id="datepicker" /><br /> -->
-      Pick a date: <%= f.date_field :date %><br />
-      Select a time: <%= f.select :time, ["7:00am", "7:15am", "7:30am", "7:45am", "8:00am"] %><br />
-      Select a location: <%= f.text_field :location %><br />
-      Select a destination: <%= f.text_field :destination %><br />
-      How many spaces are available: <%= f.text_field :spaces %><br />
-      <%= f.submit %>
-    <% end %>
+      <table><!-- Select a date: <input type="text" id="datepicker" /><br /> -->
+        <tr><td>Pick a date:</td><td><%= f.date_field :date %></td></tr>
+        <tr><td>Select a time:</td><td><%= f.select :time, ["7:00am", "7:15am", "7:30am", "7:45am", "8:00am"] %></td></tr>
+        <tr><td>Select a location:</td><td><%= f.text_field :location %></td></tr>
+        <tr><td>Select a destination:</td><td><%= f.text_field :destination %></td></tr>
+        <tr><td>How many spaces are available:</td><td><%= f.text_field :spaces %></td></tr>
+        <tr><td><%= f.submit %></td></tr>
+      </table>
+      <% end %>
+    
   </div>
 </div>
 <div id="spacing-bottom"></div>
@@ -70,16 +73,16 @@
     <%= devise_error_messages! %>
 
     <div><%= f.label :email %><br />
-    <%= f.email_field :email, :autofocus => true %></div>
+    <%= f.email_field :email, :value => @user.email %></div>
     
     <div><%= f.label :firstname %><br />
-      <%= f.text_field :firstname %></div>
+      <%= f.text_field :firstname, :value => @user.firstname %></div>
     
     <div><%= f.label :lastname %><br />
-      <%= f.text_field :lastname %></div>
+      <%= f.text_field :lastname, :value => @user.lastname %></div>
     
     <div><%= f.label :phone %><br />
-      <%= f.text_field :phone %></div>
+      <%= f.text_field :phone, :value => @user.phone %></div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
