@@ -79,7 +79,9 @@ $(function(){
       method: 'GET',
       datatype: 'json'
     }).success(function(data){
-      $trip_show.empty().append($("<h2> Additional Trip Info</h2>" + "<table><tr><td><strong>Date</strong>:</td>" + "<td>" + data.date + "</td></tr>"
+      $trip_show.empty().append($("<h2> Additional Trip Info</h2>"
+        + "<table><tr><td><strong>Driver:</strong></td>" + "<td>" + data.driver + "</td></tr>"
+        + "<tr><td><strong>Date:</strong></td>" + "<td>" + data.date + "</td></tr>"
         + "<tr><td><strong>Time:</strong></td>" + "<td>" + data.time + "</td></tr>"
         + "<tr><td><strong>Location:</strong></td>" + "<td>" + data.location + "</td></tr>"
         + "<tr><td><strong>Destination:</strong></td>" + "<td>" + data.destination + "</td></tr>"
@@ -197,7 +199,7 @@ $(function() {
     $('#mask').css({"opacity": 0, "height": doc_height });  
     $('#mask').stop().fadeTo(500,0.8);
     $element.stop().fadeIn(500);
-    $element.css({"left": (doc_width - $element.width())/2 })
-    $element.css({"top": (doc_height - $element.height())/2 })
+    $element.css({"left": (doc_width - $element.width())/2 });
+    $element.css({"top": (doc_height - $element.height())/2 });
   }  
 });

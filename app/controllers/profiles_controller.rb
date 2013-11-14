@@ -13,9 +13,10 @@ class ProfilesController < ApplicationController
   end
 
   def show
-  trip = Trip.find(params[:id])
+    trip = Trip.find(params[:id])
+    driver = User.find(trip.user_id);
     respond_to do |format|
-  		format.json {render :json => {date: trip.date, time: trip.time, location: trip.location, destination: trip.destination, spaces: trip.spaces, info: trip.info}}
+  		format.json {render :json => {driver: driver.username, date: trip.date, time: trip.time, location: trip.location, destination: trip.destination, spaces: trip.spaces, info: trip.info}}
   	end
   end
 
