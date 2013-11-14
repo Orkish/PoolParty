@@ -1,5 +1,4 @@
-var $scoll_position,
-    $height,
+var $height,
     $button_aboutus;
 
 
