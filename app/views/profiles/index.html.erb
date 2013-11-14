@@ -44,12 +44,14 @@
   </div>
 <div id="div-banner">
   <div id="nav">
-    <a href="/index">About Us</a> |
-    <a href="/profile/trips">View All Trips</a> |
+    <span class="button-nav"><a href="/index">About Us</a></span> |
+    <span class="button-nav"><a href="/profile/trips">View All Trips</a></span> |
     <% if user_signed_in? %>
-      <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+      <span class="button-nav">
+        <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+      </span>
     <% end %> |
-    <a href="#" class="modal" id="edit-link">Edit Profile</a>
+    <span class="button-nav"><a href="#" class="modal" id="edit-link">Edit Profile</a></span>
   </div>
 </div>
   <div class="profile-content">
