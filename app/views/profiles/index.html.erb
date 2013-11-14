@@ -57,16 +57,19 @@
 </div>
 <div id="trip-form" class="side-bar">
   <div class="form-container">
-      <h2>Creating a new trip!</h2>
+    <h2>Creating a new trip!</h2>
+      
     <%= form_for @trip do |f| %>
-      <!-- Select a date: <input type="text" id="datepicker" /><br /> -->
-      Pick a date: <%= f.date_field :date %><br />
-      Select a time: <%= f.select :time, ["7:00am", "7:15am", "7:30am", "7:45am", "8:00am"] %><br />
-      Select a location: <%= f.text_field :location %><br />
-      Select a destination: <%= f.text_field :destination %><br />
-      How many spaces are available: <%= f.text_field :spaces %><br />
-      <%= f.submit %>
-    <% end %>
+      <table><!-- Select a date: <input type="text" id="datepicker" /><br /> -->
+        <tr><td>Pick a date:</td><td><%= f.date_field :date %></td></tr>
+        <tr><td>Select a time:</td><td><%= f.select :time, ["7:00am", "7:15am", "7:30am", "7:45am", "8:00am"] %></td></tr>
+        <tr><td>Select a location:</td><td><%= f.text_field :location %></td></tr>
+        <tr><td>Select a destination:</td><td><%= f.text_field :destination %></td></tr>
+        <tr><td>How many spaces are available:</td><td><%= f.text_field :spaces %></td></tr>
+        <tr><td><%= f.submit %></td></tr>
+      </table>
+      <% end %>
+    
   </div>
 </div>
 <div id="spacing-bottom"></div>
