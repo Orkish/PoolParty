@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-	super
+	# super
   protected
 
   def configure_permitted_parameters
