@@ -165,30 +165,23 @@ $(function() {
   });
 });
 
-// $('.modal').on('click', function(){  
-//           var modal_id = $(this).attr('id').replace("-link","");  
-//           console.log(modal_id);
-//           show_modal(modal_id);
-//   });
+/////////// edit profile ////////////
 
-//   $('.close_modal').on('click', function(){  
-//         close_modal();  
-//   });  
+$(function() {
+  $("#edit-button").click(function(e) {
+    e.stopPropagation();
+    $("#edit-form").show( "slow" );
+  });
+  $("#profile-container").click(function(){
+    $("#edit-form").hide( "slow" );
+  });
+});
 
-// function close_modal(){  
-//       $('#mask').fadeOut(500);  
-//       $('.modal-window').fadeOut(500);  
-// }  
 
-// function show_modal(modal_id){
-// $('#mask').fadeOut(0);  
-//       $('.modal-window').fadeOut(0);
-//       $('#mask').css({ 'display' : 'block', opacity : 0});  
-//       $('#mask').fadeTo(500,0.8);  
-//       $('#'+modal_id).fadeIn(500);  
-// }  
 
-// });
+
+
+
 
 
 

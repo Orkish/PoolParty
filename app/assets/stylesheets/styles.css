@@ -188,14 +188,11 @@ tr {
 
 /****** profile page ******/
 
-/*
+
 #div-banner {
-  height: 440px;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
+  border: 1px solid #3498db;
 }
-*/
+
 
 #nav {
   bottom: 0;
@@ -213,7 +210,7 @@ tr {
 
 
 #profile-img {
-  border: 3px solid white;
+  border: 1px solid #3498db;
   border-radius: 50%;
   float: left;
   height: 200px;
@@ -249,7 +246,7 @@ tr {
 
 .currently {
   background-color: rgba(236, 240, 241, .6);
-  border: 1px solid;
+  border: 1px solid #3498db;
   border-radius: 15px;
   line-height: 2.0;
   margin-top: 10px;
@@ -260,7 +257,7 @@ tr {
 
 .profile-content {
   background-color: rgba(236, 240, 241, .6);
-  border: 1px solid;
+  border: 1px solid #3498db;
   border-radius: 15px;
   line-height: 2.0;
   margin-top: 10px;
@@ -275,6 +272,10 @@ tr {
   border-radius: 15px;
   line-height: 2.0;
   width: 400px;
+}
+
+#edit-form {
+  display: none;
 }
 
 /******* trip form ********/
@@ -351,7 +352,7 @@ tr {
 
 .trip-table {
   background-color: rgba(236, 240, 241, .6);
-  border: 1px solid;
+  border: 1px solid #3498db;
   font-family: 'Poiret One';
   font-weight: bold;
   margin-top: 15px;
