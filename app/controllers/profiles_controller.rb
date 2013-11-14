@@ -25,7 +25,7 @@ class ProfilesController < ApplicationController
   def create
     @trip = Trip.create(trip_params)
     current_user.trips << @trip
-    redirect_to "/profiles/index"
+    redirect_to "/profile/index"
   end
 
   def send_sms

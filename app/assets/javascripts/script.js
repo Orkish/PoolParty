@@ -108,14 +108,7 @@ $(function(){
   });
 });
 
-///////// date picker calendar ////////
-
-// $(function() {
-//   $( "#datepicker" ).datepicker();
-//   $.datepicker.setDefaults( $.datepicker.regional[ "" ] );
-// });
-
-////////// trip form //////////////
+//--------------- trip form ----------------//
 
 //reloads this part of code when page refreshes!
 // document.addEventListener("page:change", function(){
@@ -165,43 +158,46 @@ $(function() {
   });
 });
 
-/////////// edit profile ////////////
+//------------ edit profile ---------------//
+
+// $(function() {
+//   $("#edit-link").click(function(e) {
+//     e.stopPropagation();
+//     $("#edit-form").show( "slow" );
+//   });
+//   $("#profile-container").click(function(){
+//     $("#edit-form").hide( "slow" );
+//   });
+// });
 
 $(function() {
-  $("#edit-button").click(function(e) {
-    e.stopPropagation();
-    $("#edit-form").show( "slow" );
+  var doc_height = $(document).height();
+  var doc_width = $(document).width();
+
+  $('.modal').on('click', function(){  
+    var modal_id = $(this).attr('id').replace("-link","");  
+    console.log(modal_id);
+    show_modal(modal_id);
   });
-  $("#profile-container").click(function(){
-    $("#edit-form").hide( "slow" );
-  });
+
+  $('.close_modal').on('click', function(){  
+    close_modal();  
+  });  
+
+  function close_modal(){  
+    $('#mask').stop().fadeOut(500);  
+    $('.modal-window').stop().fadeOut(500);  
+  }  
+
+  function show_modal(modal_id){
+    var $element = $('#'+modal_id);
+
+    $('#mask').stop().fadeOut(0);  
+    $('.modal-window').stop().fadeOut(0);
+    $('#mask').css({"opacity": 0, "height": doc_height });  
+    $('#mask').stop().fadeTo(500,0.8);
+    $element.stop().fadeIn(500);
+    $element.css({"left": (doc_width - $element.width())/2 })
+    $element.css({"top": (doc_height - $element.height())/2 })
+  }  
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

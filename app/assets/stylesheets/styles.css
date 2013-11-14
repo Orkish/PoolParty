@@ -59,10 +59,11 @@ p {
   border-radius: 5px;
 }
 
-#main-container {
+.main-container {
   height: 100%;
   width: 100%;
   position: absolute;
+  text-align: center;
 }
 
 .sign-in{
@@ -240,18 +241,13 @@ tr {
   font-family: Bodoni, serif;
 }
 
-#profile-container h2 {
-
-} 
-
-.currently {
+.current-trips {
   background-color: rgba(236, 240, 241, .6);
   border: 1px solid #3498db;
   border-radius: 15px;
   line-height: 2.0;
   margin-top: 10px;
-  margin-right: 100px;
-  margin-left: 100px;
+  display: inline-block;
   padding: 20px;
 }
 
@@ -274,9 +270,9 @@ tr {
   width: 400px;
 }
 
-#edit-form {
+/*#edit-form {
   display: none;
-}
+}*/
 
 /******* trip form ********/
 
@@ -371,10 +367,40 @@ tr {
 }
 
 
+/*------------MODALS -------------*/
 
+#mask {  
+  position:absolute;
+  top: 0px;  
+  left: 0px;   
+  height: 100%;  
+  width: 100%;  
+  display: none; 
+  background-color: black;  
+}  
 
+.modal-window {  
+  position: absolute;  
+  display: none;  
+}
 
+.splash-modal {
+  padding: 20px;
+  background-color: white;
+}
 
+.splash-modal div {
+  margin-top: 10px;
+}
 
+#edit{
+  position: absolute;
+  left: 50%;
+  border-radius: 10px
+}
+
+#edit td {
+  text-align: left;
+}
 
 

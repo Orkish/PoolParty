@@ -1,122 +1,115 @@
-<div id="div-banner">
-  <div id="logo">
-    <img src="assets/logo.png" id="logo" alt="logo">
-  </div>
-  <div id="nav">
-    <a href="/index">About Us</a> |
-    <a href="/profile/trips">View All Trips</a> |
-    <% if user_signed_in? %>
-      <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+<div class="main-container">
+  <div id='mask' class='close_modal'></div> 
+  <div class="modal-window splash-modal" id="edit">
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+      <%= devise_error_messages! %>
+      <table>
+        <tr>
+          <td><%= f.label :email %></td>
+          <td><%= f.email_field :email, :value => @user.email %></td>
+        </tr>
+        
+        <tr>
+          <td><%= f.label :firstname %></td>
+          <td><%= f.text_field :firstname, :value => @user.firstname %></td>
+        </tr>
+        
+        <tr>
+          <td><%= f.label :lastname %></td>
+          <td><%= f.text_field :lastname, :value => @user.lastname %></td>
+        </tr>
+        
+        <tr>
+          <td><%= f.label :phone %></td>
+          <td><%= f.text_field :phone, :value => @user.phone %></td>
+        </tr>
+
+        <tr>
+          <td><%= f.label :password %></td>
+          <td><%= f.password_field :password, :autocomplete => "off" %></td>
+        </tr>
+
+        <tr>
+          <td><%= f.label :confirm_password %></td>
+          <td><%= f.password_field :password_confirmation %></td>
+        </tr>
+
+        <tr>
+          <td><%= f.label :current_password %><br><i>(to confirm changes)</i></td>
+          <td><%= f.password_field :current_password %></td>
+        </tr>
+      </table>
+        <%= f.submit "Update" %>
     <% end %>
-    <a href="#" id="edit-button">Edit Profile</a>
   </div>
-</div>
-<div class="profile-content">
+  <div id="div-banner">
+    <div id="logo">
+      <img src="assets/logo.png" id="logo" alt="logo">
+    </div>
+    <div id="nav">
+      <a href="/index">About Us</a> |
+      <a href="/profile/trips">View All Trips</a> |
+      <% if user_signed_in? %>
+        <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+      <% end %>
+      <a href="#" class="modal" id="edit-link">Edit Profile</a>
+    </div>
+  </div>
+  <div class="profile-content">
     <% if user_signed_in? %>
       <img src="<%= avatar_url(current_user) %>" id="profile-img" alt="">
     <% end %>
-  <h2 class="header-font">
-  Welcome, <%= current_user.username %>!</h2>
-  <p class="body-font">
-    Lomo leggings selfies, banh mi four loko before they sold out pug readymade PBR&B raw denim dreamcatcher. Cardigan you probably haven't heard of them iPhone, Truffaut slow-carb Marfa forage viral organic photo booth lomo art party chia. Butcher post-ironic salvia, locavore banjo raw denim pour-over Godard gentrify DIY Tonx. Fanny pack actually Williamsburg, you probably haven't heard of them literally ugh stumptown Wes Anderson messenger bag. Four loko lo-fi McSweeney's, scenester tote bag fashion axe selfies squid sriracha seitan gentrify. Biodiesel tattooed retro, gentrify ennui High Life XOXO VHS direct trade Austin church-key. Hella small batch messenger bag, Austin fixie PBR&B post-ironic Tumblr chia Odd Future occupy jean shorts locavore wolf mumblecore.
-  </p>
-</div>
-<div class="currently">
-  <h2>You currently have:</h2>
-</div>
-<div id="profile-container">
-  <div>
-    <div class="profile-content">
-      <h2 class="header-font">My Trips!</h2>
-      <table>
-        <thead class="header-font">
-          <td>Date</td>
-          <td>Time</td>
-          <td>Location</td>
-          <td>Destination</td>
-          <td>Spaces</td>
-        </thead>
-        <% current_user.trips.each do |trip| %>
-        <tbody class="body-font">
-          <tr>
-            <td><%= trip.date %></td>
-            <td><%= trip.time %></td>
-            <td><%= trip.location %></td>
-            <td><%= trip.destination %></td>
-            <td><%= trip.spaces %></td>
-          </tr>
-        </tbody>
-        <% end %>
-      </table>
+    <h2 class="header-font">Welcome, <%= current_user.username %>!</h2>
+    <p class="body-font">
+      Lomo leggings selfies, banh mi four loko before they sold out pug readymade PBR&B raw denim dreamcatcher. Cardigan you probably haven't heard of them iPhone, Truffaut slow-carb Marfa forage viral organic photo booth lomo art party chia. Butcher post-ironic salvia, locavore banjo raw denim pour-over Godard gentrify DIY Tonx. Fanny pack actually Williamsburg, you probably haven't heard of them literally ugh stumptown Wes Anderson messenger bag. Four loko lo-fi McSweeney's, scenester tote bag fashion axe selfies squid sriracha seitan gentrify. Biodiesel tattooed retro, gentrify ennui High Life XOXO VHS direct trade Austin church-key. Hella small batch messenger bag, Austin fixie PBR&B post-ironic Tumblr chia Odd Future occupy jean shorts locavore wolf mumblecore.
+    </p>
+  </div>
+  <div class="current-trips">
+    <h2>You currently have: <%= @user.trips.length%> scheduled trips.</h2>
+  </div>
+  <div id="profile-container">
+    <div>
+      <div class="profile-content">
+        <h2 class="header-font">My Trips!</h2>
+        <table>
+          <thead class="header-font">
+            <td>Date</td>
+            <td>Time</td>
+            <td>Location</td>
+            <td>Destination</td>
+            <td>Spaces</td>
+          </thead>
+          <% current_user.trips.each do |trip| %>
+          <tbody class="body-font">
+            <tr>
+              <td><%= trip.date %></td>
+              <td><%= trip.time %></td>
+              <td><%= trip.location %></td>
+              <td><%= trip.destination %></td>
+              <td><%= trip.spaces %></td>
+            </tr>
+          </tbody>
+          <% end %>
+        </table>
+      </div>
     </div>
   </div>
-</div>
-<div id="trip-form" class="side-bar">
-  <div class="form-container">
-    <h2>Creating a new trip!</h2>
+  <div id="trip-form" class="side-bar">
+    <div class="form-container">
+      <h2>Creating a new trip!</h2>
+        
+      <%= form_for @trip do |f| %>
+        <table><!-- Select a date: <input type="text" id="datepicker" /><br /> -->
+          <tr><td>Pick a date:</td><td><%= f.date_field :date %></td></tr>
+          <tr><td>Select a time:</td><td><%= f.select :time, ["7:00am", "7:15am", "7:30am", "7:45am", "8:00am"] %></td></tr>
+          <tr><td>Select a location:</td><td><%= f.text_field :location %></td></tr>
+          <tr><td>Select a destination:</td><td><%= f.text_field :destination %></td></tr>
+          <tr><td>How many spaces are available:</td><td><%= f.text_field :spaces %></td></tr>
+          <tr><td><%= f.submit %></td></tr>
+        </table>
+        <% end %>
       
-    <%= form_for @trip do |f| %>
-      <table><!-- Select a date: <input type="text" id="datepicker" /><br /> -->
-        <tr><td>Pick a date:</td><td><%= f.date_field :date %></td></tr>
-        <tr><td>Select a time:</td><td><%= f.select :time, ["7:00am", "7:15am", "7:30am", "7:45am", "8:00am"] %></td></tr>
-        <tr><td>Select a location:</td><td><%= f.text_field :location %></td></tr>
-        <tr><td>Select a destination:</td><td><%= f.text_field :destination %></td></tr>
-        <tr><td>How many spaces are available:</td><td><%= f.text_field :spaces %></td></tr>
-        <tr><td><%= f.submit %></td></tr>
-      </table>
-      <% end %>
-    
+    </div>
   </div>
+  <div id="spacing-bottom"></div>
 </div>
-<div id="spacing-bottom"></div>
-
-<div id="edit-form">
-  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-    <%= devise_error_messages! %>
-
-    <div><%= f.label :email %><br />
-    <%= f.email_field :email, :value => @user.email %></div>
-    
-    <div><%= f.label :firstname %><br />
-      <%= f.text_field :firstname, :value => @user.firstname %></div>
-    
-    <div><%= f.label :lastname %><br />
-      <%= f.text_field :lastname, :value => @user.lastname %></div>
-    
-    <div><%= f.label :phone %><br />
-      <%= f.text_field :phone, :value => @user.phone %></div>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-    <% end %>
-
-    <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, :autocomplete => "off" %></div>
-
-    <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %></div>
-
-    <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password %></div>
-
-    <div><%= f.submit "Update" %></div>
-  <% end %>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
