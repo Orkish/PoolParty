@@ -29,7 +29,9 @@
   					<td><%= trip.destination %></td>
   					<td><%= trip.spaces %></td>
             <td id="info">More Info</td>
-  					<td class="request" >Request a Ride!</td>
+            <% if trip.user_id != @user.id %>
+              <td class="request" >Request a Ride!</td>
+            <% end %>
   				</tr>
   			</tbody>
   		<% end %>
