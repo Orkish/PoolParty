@@ -64,6 +64,29 @@ $(function(){
 
 })
 
+//----------- TRIP DELETE BUTTON --------------------//
+
+var $del_trip;
+var item;
+
+$(function(){
+  $del_trip = $(".delete");
+
+  $del_trip.on("click", function(){
+    item = $(this);
+    $.ajax({
+      url: "/profile/delete",
+      data: { trip: $(this).data("trip_id") },
+      type: "POST"
+    }).success(function(data){
+      item.parent().remove();
+    });
+  });
+
+});
+
+
+
 //-----------AJAX CALLS FOR TRIP PAGE----------------//
 var $trip_row,
     $trip_show,
@@ -104,8 +127,8 @@ $(function(){
       url: '/request/driver/' + $(this).parent().data("user_id"),
       method: 'GET'
     }).done(function(data){
-      console.log($(this));
-      console.log(data);
+      // console.log($(this));
+      // console.log(data);
     });
   });
 });

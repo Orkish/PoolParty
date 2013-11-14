@@ -42,6 +42,15 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def delete_trip
+    trip = Trip.find(params[:trip])
+    trip_id = trip.id
+    trip.delete
+    respond_to do |format|
+      format.json {render :json => {deleted: trip_id}}
+    end    
+  end
+
   private
 
   def trip_params

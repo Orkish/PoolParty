@@ -9,6 +9,7 @@ Poolparty::Application.routes.draw do
   get '/trip/:id', to: "profiles#show"
   get '/new', to: "profiles#new"
   get '/profile/index', to: "profiles#index"
+  post '/profile/delete', to: "profiles#delete_trip"
 
   get '/request/driver/:id', to: "profiles#send_sms"
 
