@@ -215,9 +215,9 @@ tr {
 #profile-img {
   border: 3px solid white;
   border-radius: 50%;
+  float: left;
   height: 200px;
-  margin-right: 250px;
-  margin-left: 150px;
+  margin-right: 10px;
   padding: 1px;
   width: 200px;
 }
@@ -247,12 +247,25 @@ tr {
 
 } 
 
+.currently {
+  background-color: rgba(236, 240, 241, .6);
+  border: 1px solid;
+  border-radius: 15px;
+  line-height: 2.0;
+  margin-top: 10px;
+  margin-right: 100px;
+  margin-left: 100px;
+  padding: 20px;
+}
+
 .profile-content {
   background-color: rgba(236, 240, 241, .6);
   border: 1px solid;
   border-radius: 15px;
   line-height: 2.0;
   margin-top: 10px;
+  margin-right: 100px;
+  margin-left: 100px;
   padding: 20px;
 }
 
@@ -300,6 +313,11 @@ tr {
 
 .not-depressing {
   color: rgba(211, 84, 0,1.0);
+}
+
+#info {
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .request {
