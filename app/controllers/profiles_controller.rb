@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
 
   def index
     @trip = Trip.new
+    @user = current_user
   end
 
   def trips
