@@ -6,6 +6,7 @@
       <% if user_signed_in? %>
         <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
       <% end %> |
+      <a href="/profile">Profile</a>
     </div>
   </div>
   <div id="trip-container">
