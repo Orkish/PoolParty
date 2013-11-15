@@ -135,11 +135,15 @@ function animateMenuOut() {
 }
 
 $(function() {
+
   animation_duration = 500;
   $side_menu = $('#trip-form');
 
   $side_menu.on("mouseover", animateMenuIn);
   $side_menu.on("mouseout", animateMenuOut);
+
+  setTimeout(animateMenuIn, 500);
+  setTimeout(animateMenuOut, 2000);
 
   // $(document).on('mouseover', '#trip-form', animateMenuIn);
   // $(document).on('mouseout', '#trip-form', animateMenuOut)

@@ -45,6 +45,21 @@ p {
   color: black;
 }
 
+/****** nav buttons ******/
+
+.button-nav:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: #34495e;
+  color: #ecf0f1;
+  border: 1px solid black;
+  margin: -1px;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+
+/*************************/
+
 #example-video-1 {
   position: absolute;
   height: 100%;
@@ -66,11 +81,11 @@ p {
   text-align: center;
 }
 
-.sign-in{
+/*.sign-in{
   font-family: 'Poiret One';
   font-weight: bold;
   margin-top: 15px;
-}
+}*/
 
 .splash-video {
   height: 100%;
@@ -240,6 +255,7 @@ tr {
 
 .body-font {
   font-family: Bodoni, serif;
+  color: black;
 }
 
 .current-trips {
