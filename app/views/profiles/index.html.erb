@@ -59,9 +59,9 @@
       <img src="<%= avatar_url(current_user) %>" id="profile-img" alt="">
     <% end %>
     <h2 class="header-font">Welcome, <%= current_user.username %>!</h2>
-    <p class="body-font">
+    <p class="body-font"><strong>
       Lomo leggings selfies, banh mi four loko before they sold out pug readymade PBR&B raw denim dreamcatcher. Cardigan you probably haven't heard of them iPhone, Truffaut slow-carb Marfa forage viral organic photo booth lomo art party chia. Butcher post-ironic salvia, locavore banjo raw denim pour-over Godard gentrify DIY Tonx. Fanny pack actually Williamsburg, you probably haven't heard of them literally ugh stumptown Wes Anderson messenger bag. Four loko lo-fi McSweeney's, scenester tote bag fashion axe selfies squid sriracha seitan gentrify. Biodiesel tattooed retro, gentrify ennui High Life XOXO VHS direct trade Austin church-key. Hella small batch messenger bag, Austin fixie PBR&B post-ironic Tumblr chia Odd Future occupy jean shorts locavore wolf mumblecore.
-    </p>
+    </strong></p>
   </div>
   <div class="current-trips">
     <h2>You currently have: <%= @user.trips.length%> scheduled trips.</h2>

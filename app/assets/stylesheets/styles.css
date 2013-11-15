@@ -150,6 +150,7 @@ html {
   border-radius: 10px;
   display: inline-block;
   font-family: 'Poiret One';
+  line-height: 2.0;
   padding: 20px;
   margin: 1px;
   width: 450px;
@@ -259,7 +260,7 @@ tr {
 }
 
 .body-font {
-  font-family: Bodoni, serif;
+  font-family: 'Poiret One';
   color: black;
 }
 
@@ -372,7 +373,8 @@ tr {
   text-align: center;
 }
 
-.trips {
+.trips td{
+  font-weight: bold;
   text-align: center;
 }
 
