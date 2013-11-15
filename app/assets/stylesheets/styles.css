@@ -14,9 +14,6 @@ h1 h2 h3 h4 h5 h6 {
   font-family: Helvetica;
 }
 
-p {
-  font-family: Garamond;
-}
 
 /******* splash page ********/
 
@@ -108,7 +105,7 @@ p {
   position: relative;
   text-align: center;
   margin: 0 auto;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.9);
   z-index: 100;
 }
 
@@ -136,22 +133,25 @@ html {
   width: 100px;
 }*/
 
+.opening {
+  font-size: 1.5em;
+}
+
 #splash-second {
   text-align: center;
-  
   height: 100%;
   width: 100%;
   position: absolute;
   top: 100%;
 }
 
-#splash-about {
-  background-color: rgba(255,255,255,0.6);
+.splash-about {
+  background-color: rgba(255,255,255,0.9);
   border: 1px solid #3498db;
   border-radius: 10px;
   display: inline-block;
-  font-family: 'Poiret One';
-  line-height: 2.0;
+  font-family: Lustria;
+  line-height: 1.5;
   padding: 20px;
   margin: 1px;
   width: 450px;
@@ -219,7 +219,7 @@ tr {
 
 #nav {
   bottom: 0;
-  background-color: rgba(236, 240, 241, .6);
+  background-color: rgba(236, 240, 241, .9);
   height: 30px;
   padding-top: 5px;
   text-align: center;
@@ -272,7 +272,7 @@ tr {
 
 .current-trips {
   font-family: Lustria;
-  background-color: rgba(236, 240, 241, .6);
+  background-color: rgba(236, 240, 241, .9);
   border: 1px solid #3498db;
   border-radius: 15px;
   line-height: 2.0;
@@ -282,7 +282,7 @@ tr {
 }
 
 .profile-content {
-  background-color: rgba(236, 240, 241, .6);
+  background-color: rgba(236, 240, 241, .9);
   border: 1px solid #3498db;
   border-radius: 15px;
   line-height: 2.0;
@@ -362,7 +362,7 @@ tr {
 }
 
 #show-trip {
-  background-color: rgba(236, 240, 241, .6);
+  background-color: rgba(236, 240, 241, .9);
   display: none;
   text-align: center;
   font-family: 'Poiret One';
@@ -383,7 +383,7 @@ tr {
 }
 
 .trip-table {
-  background-color: rgba(236, 240, 241, .6);
+  background-color: rgba(236, 240, 241, .9);
   border: 1px solid #3498db;
   font-family: 'Poiret One';
   font-weight: bold;

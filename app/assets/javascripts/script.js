@@ -34,7 +34,7 @@ $(function(){
   $div_bottom = $('#splash-third');
 
   var $div_top_content = $('#splash-home');
-  var $div_mid_content = $('#splash-about');
+  var $div_mid_content = $('.splash-about');
   var $div_bottom_content = $('#splash-signup');
 
   var top_margin_top = ($div_top.height() - $div_top_content.height()) / 2;
@@ -48,7 +48,7 @@ $(function(){
   $(window).resize(function(){
 
     var $div_top_content = $('#splash-home');
-    var $div_mid_content = $('#splash-about');
+    var $div_mid_content = $('.splash-about');
     var $div_bottom_content = $('#splash-signup');
 
     var top_margin_top = ($div_top.height() - $div_top_content.height()) / 2;
