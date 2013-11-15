@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Poiret+One);
+@import url(http://fonts.googleapis.com/css?family=Lustria);
 
 * {
   margin: 0;
@@ -222,6 +223,7 @@ tr {
   height: 30px;
   padding-top: 5px;
   text-align: center;
+  font-family: "Lustria";
 }
 
 #nav a {
@@ -255,7 +257,7 @@ tr {
 }
 
 .header-font {
-  font-family: Helvetica, sans-serif;
+  font-family: Lustria;
   margin-top: 5px;
 }
 
@@ -265,6 +267,7 @@ tr {
 }
 
 .current-trips {
+  font-family: Lustria;
   background-color: rgba(236, 240, 241, .6);
   border: 1px solid #3498db;
   border-radius: 15px;

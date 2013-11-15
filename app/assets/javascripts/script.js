@@ -179,7 +179,7 @@ $(function() {
 $(function() {
   $(".trips").click(function(e) {
     e.stopPropagation();
-    $("#show-trip").show( "slow" );
+    $("#show-trip").fadeIn( "slow" );
   });
   $("html").click(function() {
     $("#show-trip").hide( 1500 );
