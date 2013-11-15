@@ -261,6 +261,10 @@ tr {
   margin-top: 5px;
 }
 
+.header-font td {
+  width: 350px;
+}
+
 .body-font {
   font-family: 'Poiret One';
   color: black;
@@ -303,18 +307,15 @@ tr {
 /******* trip form ********/
 
 .form-container {
+  font-family: Lustria;
   line-height: 2.0;
   padding-top: 15px;
   padding-left: 20px;
   
 }
 
-.trip-form {
-  background-color: lightblue;
-}
-
 .side-bar {
-  background-color: #ffffff;
+  background-color: lightblue;
   bottom: 30px;
   opacity: 0.5;
   filter: alpha(opacity=40);
