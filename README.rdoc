@@ -1,28 +1,13 @@
-== README
+Pool Party
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an app built on Rails 4 framework. 
 
-Things you may want to cover:
+Pool Party makes it easier, safer and more convenient for people to carpool into the city. 
 
-* Ruby version
+Our app allows users to create a username and password by signing up for free. From there, the user will be able to list “trips” into the city including the amount of spaces available for other riders to join them. 
 
-* System dependencies
+Pool Party will only allow users who have already signed up with our application to be able to use this feature. We’ve made it easier and safer than ever to carpool with people. Users will be able to join other “trips” by selecting the join button. From there the driver of the trip will be notified via text message about the request for a carpool. Users will have access to view other user’s profile.
 
-* Configuration
+A rating system will be in place for users to vote and discuss their experience with the carpool rides they’ve had. 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Thanks for visiting and lets have a Pool Party!
