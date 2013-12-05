@@ -1,4 +1,4 @@
-Pool Party
+==Pool Party
 
 This is an app built on Rails 4 framework. 
 
